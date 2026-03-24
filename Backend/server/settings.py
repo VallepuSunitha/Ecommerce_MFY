@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 from datetime import timedelta
 from pathlib import Path
+from decouple import config
 import os
 
 
@@ -22,13 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^i#)79&cnmvx07(iqd+d_%m6&#@p6_m0540n&hpm##u_5=$f0j'
-
+# SECRET_KEY = 'django-insecure-^i#)79&cnmvx07(iqd+d_%m6&#@p6_m0540n&hpm##u_5=$f0j'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+# ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = []
-
+SECRET_KEY = config('DJANGO_SECRET_KEY', default='your-dev-secret-key')
+DEBUG = False
+ALLOWED_HOSTS = ["madeforyou-backend.onrender.com",
+                     "127.0.0.1", 
+                     "localhost"
+    ]
+CSRF_TRUSTED_ORIGINS = ['https://madeforyou-backend.onrender.com']
+CSRF_TRUSTED_ORIGINS= ['https://madeforyou-frontend.netlify.app']
 
 # Application definition
 
@@ -121,7 +128,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -129,6 +135,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'https://madeforyou-frontend.netlify.app',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -139,3 +148,6 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

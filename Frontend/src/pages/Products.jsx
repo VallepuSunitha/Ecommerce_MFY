@@ -29,6 +29,7 @@ useEffect(() => {
   useEffect(() => {
   API.get("products/")
     .then(res => {
+      console.log("DATA:", res.data);  
       setProducts(res.data);
       setLoading(false);
     })
