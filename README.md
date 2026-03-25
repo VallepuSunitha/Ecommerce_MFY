@@ -30,14 +30,8 @@ A full-stack E-commerce web application built to provide users with a seamless o
 
 EcommerceProject/
 
-├── frontend/ (if separate frontend)  
+├── frontend/ 
 ├── backend/  
-├── templates/  
-├── static/  
-├── media/  
-├── db.sqlite3  
-├── manage.py  
-└── requirements.txt  
 
 
 ## 👩‍💻 Author
