@@ -2,7 +2,7 @@
 
 A full-stack E-commerce web application built to provide users with a seamless online shopping experience. The platform allows users to browse products, add items to the cart, and place orders, while admins can manage products and orders efficiently.
 
----
+
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ A full-stack E-commerce web application built to provide users with a seamless o
 - Admin Panel for Product Management
 - Responsive UI
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -24,13 +24,14 @@ A full-stack E-commerce web application built to provide users with a seamless o
 - Database: SQLite
 - Version Control: Git & GitHub
 
----
+
 
 ## 📁 Project Structure
 
 EcommerceProject/
 
 ├── frontend/ 
+
 ├── backend/  
 
 
