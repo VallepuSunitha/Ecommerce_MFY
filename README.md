@@ -34,6 +34,28 @@ EcommerceProject/
 
 ├── backend/  
 
+## 📸 Screenshots
+
+### Home Page
+
+![Home](Frontend/Screenshots/home.png)
+
+### Products Page
+
+![Products](Frontend/Screenshots/products.png)
+
+### Cart Page
+
+![Cart](Frontend/Screenshots/cart.png)
+
+### Whislist Page
+
+![Whislist](Frontend/Screenshots/whislist.png)
+
+### Myorders Page
+
+![Myorders](Frontend/Screenshots/myorders.png)
+
 
 ## 👩‍💻 Author
 
