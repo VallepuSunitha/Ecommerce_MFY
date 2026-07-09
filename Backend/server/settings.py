@@ -25,17 +25,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-^i#)79&cnmvx07(iqd+d_%m6&#@p6_m0540n&hpm##u_5=$f0j'
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# ALLOWED_HOSTS = ['*']
+DEBUG = True
+ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = config('DJANGO_SECRET_KEY', default='your-dev-secret-key')
-DEBUG = False
-ALLOWED_HOSTS = ["madeforyou-backend.onrender.com",
-                     "127.0.0.1", 
-                     "localhost"
-    ]
-CSRF_TRUSTED_ORIGINS = ['https://madeforyou-backend.onrender.com']
-CSRF_TRUSTED_ORIGINS= ['https://madeforyou-frontend.netlify.app']
+# DEBUG = False
+# ALLOWED_HOSTS = ["madeforyou-backend.onrender.com",
+#                      "127.0.0.1", 
+#                      "localhost"
+    # ]
+CSRF_TRUSTED_ORIGINS = ['https://madeforyou-backend.onrender.com',
+                        'https://madeforyou-frontend.netlify.app',
+                        ]
 
 # Application definition
 
